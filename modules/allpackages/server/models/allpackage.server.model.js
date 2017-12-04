@@ -12,20 +12,7 @@ var mongoose = require('mongoose'),
 var AllpackageSchema = new Schema({
   packageName: {
     type: String,
-    default: '',
-    required: 'Please fill Allpackage name',
-    trim: true
-  },
-  packageType: {
-    type: String,
-    default: '',
-    required: 'Please fill Allpackage name',
-    trim: true
-  },
-  price: {
-    type: Number,
-    default: '',
-    required: 'Please enter prices'
+    default: ''
   },
   created: {
     type: Date,

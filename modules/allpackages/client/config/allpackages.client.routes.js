@@ -20,12 +20,13 @@
         controller: 'AllpackagesListController',
         controllerAs: 'vm',
         data: {
+          roles: ['user'],
           pageTitle: 'Allpackages List'
         }
       })
       .state('allpackages.create', {
         url: '/create',
-        templateUrl: 'modules/allpackages/client/views/form-allpackage.client.view.html',
+        templateUrl: 'modules/allpackages/client/views/createPackage.client.view.html',
         controller: 'AllpackagesController',
         controllerAs: 'vm',
         resolve: {
@@ -38,7 +39,8 @@
       })
       .state('allpackages.edit', {
         url: '/:allpackageId/edit',
-        templateUrl: 'modules/allpackages/client/views/form-allpackage.client.view.html',
+        templateUrl: 'modules/allpackages/client/views/createPackage.client.view.html',
+        //templateUrl: 'modules/allpackages/client/views/view-allpackage.client.view.html',
         controller: 'AllpackagesController',
         controllerAs: 'vm',
         resolve: {
@@ -46,7 +48,7 @@
         },
         data: {
           roles: ['user', 'admin'],
-          pageTitle: 'Edit Allpackage {{ allpackageResolve.name }}'
+          pageTitle: 'Edit package {{ allpackageResolve.name }}'
         }
       })
       .state('allpackages.view', {
@@ -58,7 +60,8 @@
           allpackageResolve: getAllpackage
         },
         data: {
-          pageTitle: 'Allpackage {{ allpackageResolve.name }}'
+          roles: ['user', 'admin'],
+          pageTitle: 'package {{ allpackageResolve.name }}'
         }
       });
   }

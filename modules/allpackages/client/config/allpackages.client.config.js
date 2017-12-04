@@ -10,10 +10,10 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'Allpackages',
+      title: 'Package',
       state: 'allpackages',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['user']
     });
 
     // Add the dropdown list item
@@ -24,14 +24,14 @@
 
     // Add the dropdown create item
     menuService.addSubMenuItem('topbar', 'allpackages', {
-      title: 'Create Allpackage',
+      title: 'Select package',
       state: 'allpackages.create',
       roles: ['user']
     });
 
     menuService.addSubMenuItem('topbar', 'allpackages', {
-      title: 'Update Packages',
-      state: 'allpackages.update',
+      title: 'Update Package',
+      state: 'allpackages.edit',
       roles: ['user']
     });
   }
