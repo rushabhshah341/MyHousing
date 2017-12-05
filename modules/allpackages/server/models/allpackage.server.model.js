@@ -18,6 +18,10 @@ var AllpackageSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  expDate: {
+    type: Date,
+    default: +new Date() + 365*24*60*60*1000
+  },
   user: {
     type: Schema.ObjectId,
     ref: 'User'

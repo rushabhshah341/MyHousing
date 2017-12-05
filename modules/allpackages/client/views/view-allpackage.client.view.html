@@ -61,11 +61,14 @@
               <tr>
                 <th>Package Name</th>
                 <th>Created on</th>
-                <th></th>
+                <th>Expires on</th>
+                <th>Update Delete</th>
+
               </tr>
               <tr>
                 <td><span ng-bind="vm.allpackage.packageName"></span></td>
                 <td> <span ng-bind="vm.allpackage.created | date:'mediumDate'"></span></td>
+                <td><span ng-bind=" vm.allpackage.expDate | date:'mediumDate'"></span></td>
                 <td><a class="btn btn-primary"
                        ui-sref="allpackages.edit({ allpackageId: vm.allpackage._id })">
                   <i class="glyphicon glyphicon-edit"></i>
