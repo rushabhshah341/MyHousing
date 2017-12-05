@@ -1,4 +1,4 @@
-<section id="main">
+<section id="main" ng-controller="HeaderController">
   <div class="container">
     <div class="row">
       <!--<div class="col-md-3">-->
@@ -12,9 +12,10 @@
           <!--</a>-->
         <!--</div>-->
       <!--</div>-->
-
-      <div class="col-md-9">
-        <div class="panel panel-default">
+      <!-- <pre>value = {{ADMIN}}</pre>-->
+      <div ng-if="ADMIN">
+        <div class="col-md-9">
+         <div class="panel panel-default">
           <div class="panel-heading">
             <!-- Flagged Properties -->
             <h3 class="panel-title">List of Flagged Properties</h3>
@@ -36,7 +37,7 @@
                   <td>{{ x.name }}</td>
                   <td>{{ x.address }}</td>
                   <td>{{ x.flagValue }}</td>
-                  <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.remove(x._id)">
+                  <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.remove(x)">
                     <i class="glyphicon glyphicon-trash"></i>
                   </a>
                    <!--<td><button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button></td>-->
@@ -47,10 +48,9 @@
           </div>
         </div>
       </div>
+      </div>
 
-
-
-
+    <div ng-if!="vm.userFlag">
       <div class="col-md-9">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -74,7 +74,7 @@
                   <td>{{ x.address }}</td>
                   <td>{{ x.name }}</td>
                   <!-- <td><script>var id = "{{ x._id }}"</script></td> -->
-                  <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.propertyVerification(x._id)">
+                  <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.propertyVerification(x)">
                     <i class="glyphicon glyphicon-ok"></i>
                   </a>
                   <!--<td><button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button></td>-->
@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-
+    </div>
     </div>
   </div>
 </section>

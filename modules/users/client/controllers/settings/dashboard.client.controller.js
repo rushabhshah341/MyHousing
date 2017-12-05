@@ -7,9 +7,10 @@
 
   DashboardController.$inject = ['$scope', '$http', 'Authentication', 'UsersService', 'Notification', 'ListingpropertiesService'];
 
-  function DashboardController($scope, $http, Authentication, UsersService, Notification, ListingpropertiesService) {
+  function DashboardController($scope, $http, Authentication, UsersService, Notification, listingproperty, ListingpropertiesService) {
     var vm = this;
     vm.ListingpropertiesService = ListingpropertiesService;
+    vm.listingproperty = listingproperty;
     vm.user = Authentication.user;
     //console.log(vm.ListingpropertiesService);
 
@@ -18,25 +19,26 @@
     //console.log(vm.ListingpropertiesService);
 
     // Remove existing Listingproperty
-    function remove(id) {
-        $http.get('/api/listingproperties/')
-          .success(function(data) {
-            console.log(data);
-            $scope.names = data;
+    function remove(data) {
+        $http.delete ('/api/listingproperties/' + data._id)
+          .success(function(data1) {
+            // console.log(data1);
+            Notification.success('Property Deleted successfully');
           })
-          .error(function(data) {
-            console.log('Error: ' + data);
+          .error(function(data1) {
+           // console.log('Error: ' + data1);
+            Notification.error('Property Deletion failed.');
           });
-        $scope.names.splice(id,1);
+
     }
 
-    function propertyVerification(id){
-      console.log(id);
-      console.log("Property Flag verification.");
-      ListingpropertiesService.propertyVerificationFlag = 1;
-      console.log(ListingpropertiesService.propertyVerificationFlag +'......'+ id + '.......');
-      //console.log(vm.ListingpropertiesService);
-      $http.put('/api/listingproperties/' + id, ListingpropertiesService).success(function() {
+    function propertyVerification(data){
+     // console.log(data);
+     // console.log("Property Flag verification.");
+      data.propertyVerificationFlag = 1;
+     // console.log(data.propertyVerificationFlag +'......'+ data._id + '.......');
+      // console.log(ListingpropertiesService);
+      $http.put('/api/listingproperties/' + data._id, data).success(function() {
         Notification.success('Property verified successfully');
       }).error(function() {
         Notification.error('Property verification failed');
