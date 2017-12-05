@@ -16,7 +16,7 @@
   </a>
 </div> -->
   <div class="list-group">
-    <a ng-repeat="listingproperty in vm.pagedItems"
+    <a ng-repeat="listingproperty in vm.pagedItems" ng-if="listingproperty.propertyVerificationFlag == 1""
        ui-sref="listingproperties.view({ listingpropertyId: listingproperty._id })"
        class="list-group-item" >
       <!-- <small class="list-group-item-text">
@@ -36,9 +36,9 @@
           <p class="list-group-item-text" ng-bind="vm.listingproperty.lat"></p>
           <p class="list-group-item-text" ng-bind="vm.listingproperty.lon"></p>
         </marker>
-        
+
     </map> -->
-    
+
       <!-- <h2>{{listingproperty.address}}</h2>
       <h2>{{listingproperty.price}}</h2>
       <h2>{{listingproperty.unit}}</h2>
