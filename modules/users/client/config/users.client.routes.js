@@ -66,7 +66,7 @@
           pageTitle: 'User Dashboard'
         }
       })
-      /*.state('settings.package', {
+      .state('settings.package', {
         url: '/package',
         templateUrl: '/modules/users/client/views/settings/package-selection.client.view.html',
         controller: 'PackageSelectionController',
@@ -83,7 +83,7 @@
         data: {
           pageTitle: 'Settings payment'
         }
-      })*/
+      })
       .state('authentication', {
         abstract: true,
         url: '/authentication',
