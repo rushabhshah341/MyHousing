@@ -31,7 +31,8 @@
 //     }
 
 function flagVal(){
- listingproperty.flagValue = 1;
+ listingproperty.flagValue += 1;
+ console.log("fagValue :: " + listingproperty.flagValue);
  $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
       Notification.success('Property flagged successfully');
   }).error(function() {
@@ -66,7 +67,7 @@ $scope.$on('mapInitialized', function(event,map) {
 
 $scope.$watch('listingproperty.lat + listingproperty.lon',function(newVal,oldVal){
             if(newVal === oldVal){return;}
-            // checks if value has changed 
+            // checks if value has changed
 map.setCenter({lat:$scope.listingproperties.lat,lng:$scope.listingproperties.lon});
 marker.setPosition({lat:$scope.listingproperties.lat,lng:$scope.listingproperties.lon});
           });
@@ -139,7 +140,7 @@ function geocode(){
     };
 
     function flagVal(){
-      listingproperty.flagValue = 1;
+      listingproperty.flagValue += 1;
       console.log(listingproperty.flagValue +'......'+ listingproperty._id);
       console.log(vm.listingproperty);
       $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {

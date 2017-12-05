@@ -1,110 +1,117 @@
-<section id="main" ng-controller="HeaderController">
-  <div class="container">
-    <div class="row">
-      <!--<div class="col-md-3">-->
-        <!--<div class="list-group">-->
-          <!--&lt;!&ndash; Dashboard Tabs &ndash;&gt;-->
-          <!--<a href="profile.html list-group-item-action" class="list-group-item"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>-->
-            <!--Unverified Users-->
-          <!--</a>-->
-          <!--<a href="profile.html list-group-item-action" class="list-group-item"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>-->
-            <!--Inquiry List-->
-          <!--</a>-->
+  <section id="main" ng-controller="HeaderController">
+    <div class="container">
+      <div class="row">
+        <!--<div class="col-md-3">-->
+          <!--<div class="list-group">-->
+            <!--&lt;!&ndash; Dashboard Tabs &ndash;&gt;-->
+            <!--<a href="profile.html list-group-item-action" class="list-group-item"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>-->
+              <!--Unverified Users-->
+            <!--</a>-->
+            <!--<a href="profile.html list-group-item-action" class="list-group-item"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>-->
+              <!--Inquiry List-->
+            <!--</a>-->
+          <!--</div>-->
         <!--</div>-->
-      <!--</div>-->
-      <!-- <pre>value = {{ADMIN}}</pre>-->
-      <div ng-if="ADMIN">
+        <!-- <pre>value = {{ADMIN}}</pre>-->
+        <div ng-if="ADMIN">
+          <div class="col-md-9">
+            <div class="">
+              <button class="btn btn-success" style="margin-left: 740px; margin-bottom: 10px;" ng-click="loadData()">Refresh Data</button>
+            </div>
+           <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- Flagged Properties -->
+              <h3 class="panel-title">List of Flagged Properties</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Address</th>
+                  <th>flagValue</th>
+                </tr>
+                </thead>
+              </table>
+
+              <div class="bodycontainer scrollable">
+                <table class="table table-striped table-hover table-scrollable">
+                  <tr ng-repeat="x in names" ng-if="x.flagValue > 4">
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.address }}</td>
+                    <td>{{ x.flagValue }}</td>
+                    <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.remove(x)">
+                      <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                     <!--<td><button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button></td>-->
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
         <div class="col-md-9">
-         <div class="panel panel-default">
-          <div class="panel-heading">
-            <!-- Flagged Properties -->
-            <h3 class="panel-title">List of Flagged Properties</h3>
-          </div>
-          <div class="panel-body">
-            <table class="table table-striped table-hover">
-              <thead>
-              <tr>
-                <th>Firstname</th>
-                <th>Address</th>
-                <th>flagValue</th>
-              </tr>
-              </thead>
-            </table>
-
-            <div class="bodycontainer scrollable">
-              <table class="table table-striped table-hover table-scrollable">
-                <tr ng-repeat="x in names" ng-if="x.flagValue==1">
-                  <td>{{ x.name }}</td>
-                  <td>{{ x.address }}</td>
-                  <td>{{ x.flagValue }}</td>
-                  <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.remove(x)">
-                    <i class="glyphicon glyphicon-trash"></i>
-                  </a>
-                   <!--<td><button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button></td>-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <!-- Flagged Properties -->
+              <h3 class="panel-title">List of Properties</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-striped table-hover">
+                <thead>
+                <tr >
+                  <th>Address</th>
+                  <th>Owner</th>
+                  <th style="text-align:center;">Property Verify</th>
                 </tr>
-
+                </thead>
               </table>
+
+              <div class="bodycontainer scrollable">
+                <table class="table table-striped table-hover table-scrollable">
+                  <tr ng-repeat="x in names" ng-if="x.propertyVerificationFlag == 0">
+                    <td>{{ x.address }}</td>
+                    <td>{{ x.name }}</td>
+                    <!-- <td><script>var id = "{{ x._id }}"</script></td> -->
+                    <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.propertyVerification(x)">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </a>
+                    <!--<td><button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button></td>-->
+                  </tr>
+
+                </table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
+        </div>
 
-    <div ng-if!="vm.userFlag">
-      <div class="col-md-9">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <!-- Flagged Properties -->
-            <h3 class="panel-title">List of Properties</h3>
-          </div>
-          <div class="panel-body">
-            <table class="table table-striped table-hover">
-              <thead>
-              <tr >
-                <th>Address</th>
-                <th>Owner</th>
-                <th style="text-align:center;">Property Verify</th>
-              </tr>
-              </thead>
-            </table>
+        <div ng-if="userFlag">
 
-            <div class="bodycontainer scrollable">
-              <table class="table table-striped table-hover table-scrollable">
-                <tr ng-repeat="x in names">
-                  <td>{{ x.address }}</td>
-                  <td>{{ x.name }}</td>
-                  <!-- <td><script>var id = "{{ x._id }}"</script></td> -->
-                  <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.propertyVerification(x)">
-                    <i class="glyphicon glyphicon-ok"></i>
-                  </a>
-                  <!--<td><button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button></td>-->
-                </tr>
-
-              </table>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<!--<div class="table-responsive">-->
-  <!--<table class="table table-hover">-->
-    <!--<thead>-->
-    <!--<tr>-->
-      <!--<th>Firstname</th>-->
-      <!--<th>Address</th>-->
-      <!--<th>flagValue</th>-->
-    <!--</tr>-->
-    <!--</thead>-->
-    <!--<tr ng-repeat="x in names">-->
-      <!--<td>{{ x.name }}</td>-->
-      <!--<td>{{ x.address }}</td>-->
-      <!--<td>{{ x.flagValue }}</td>-->
-    <!--</tr>-->
-  <!--</table>-->
-<!--</div>-->
+  <!--<div class="table-responsive">-->
+    <!--<table class="table table-hover">-->
+      <!--<thead>-->
+      <!--<tr>-->
+        <!--<th>Firstname</th>-->
+        <!--<th>Address</th>-->
+        <!--<th>flagValue</th>-->
+      <!--</tr>-->
+      <!--</thead>-->
+      <!--<tr ng-repeat="x in names">-->
+        <!--<td>{{ x.name }}</td>-->
+        <!--<td>{{ x.address }}</td>-->
+        <!--<td>{{ x.flagValue }}</td>-->
+      <!--</tr>-->
+    <!--</table>-->
+  <!--</div>-->
 
