@@ -1,0 +1,43 @@
+// Pulls Mongoose dependency for creating schemas
+var mongoose    = require('mongoose');
+var Schema      = mongoose.Schema;
+
+// Creates a User Schema. This will be the basis of how user data is stored in the db
+var UserSchema = new Schema({
+    username: {type: String, required: true},
+    noofbedroom:{type:Number, required:true},
+    price:{type:Number,required:true},
+    address :{type: String, required:true},
+    location:{type:[Number],index: '2dsphere', required:true}
+
+    // latitude :{type: Number, required:true},
+    // longitude:{type: Number, required:true}
+    // location: {
+    //     type: {
+    //         type: String,
+    //         enum: 'Point',
+    //         default: 'Point'
+    //     },
+    //     coordinates: {
+    //         type: [Number],
+    //         default: [0, 0]
+    //     }
+    // }
+
+});
+
+// Sets the created_at parameter equal to the current time
+UserSchema.pre('save', function(next){
+    now = new Date();
+    this.updated_at = now;
+    if(!this.created_at) {
+        this.created_at = now
+    }
+    next();
+});
+
+// Indexes this schema in 2dsphere format (critical for running proximity searches)
+//UserSchema.index({location: '2dsphere'});
+
+// Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-users"
+module.exports = mongoose.model('propertyUsers', UserSchema);
