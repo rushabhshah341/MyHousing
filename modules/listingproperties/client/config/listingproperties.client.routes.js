@@ -20,6 +20,7 @@
         controller: 'ListingpropertiesListController',
         controllerAs: 'vm',
         data: {
+          roles: ['user', 'admin', 'manager', 'guest', '*'],
           pageTitle: 'Listingproperties List'
         }
       })
