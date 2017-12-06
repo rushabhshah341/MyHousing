@@ -31,15 +31,15 @@
 // }
 //     }
 
-function flagVal(){
- listingproperty.flagValue += 1;
- console.log("fagValue :: " + listingproperty.flagValue);
- $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
-      Notification.success('Property flagged successfully');
-  }).error(function() {
-      Notification.error('Property flagged successfully');
-  });
-}
+// function flagVal(){
+//  listingproperty.flagValue += 1;
+//  console.log("fagValue :: " + listingproperty.flagValue);
+//  $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
+//       Notification.success('Property flagged successfully');
+//   }).error(function() {
+//       Notification.error('Property flagged successfully');
+//   });
+// }
 
 $scope.create = function() {
   var listingproperties = new listingproperty({

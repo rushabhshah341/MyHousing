@@ -18,7 +18,7 @@
         controller: 'SettingsController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager']
+          roles: []
         }
       })
       .state('settings.profile', {
@@ -27,7 +27,7 @@
         controller: 'EditProfileController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Settings'
         }
       })
@@ -37,7 +37,7 @@
         controller: 'ChangePasswordController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Settings password'
         }
       })
@@ -47,7 +47,7 @@
         controller: 'SocialAccountsController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Settings accounts'
         }
       })
@@ -57,7 +57,7 @@
         controller: 'ChangeProfilePictureController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Settings picture'
         }
       })
@@ -67,7 +67,7 @@
         controller: 'DashboardController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'User Dashboard'
         }
       })
@@ -77,7 +77,7 @@
         controller: 'PackageSelectionController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Settings package'
         }
       })
@@ -87,7 +87,7 @@
         controller: 'PaymentController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Settings payment'
         }
       })
@@ -104,7 +104,7 @@
         controller: 'AuthenticationController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Signup'
         }
       })
@@ -114,7 +114,7 @@
         controller: 'AuthenticationController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Signin'
         }
       })
@@ -129,7 +129,7 @@
         controller: 'PasswordController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Password forgot'
         }
       })
@@ -142,7 +142,7 @@
         url: '/invalid',
         templateUrl: '/modules/users/client/views/password/reset-password-invalid.client.view.html',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Password reset invalid'
         }
       })
@@ -150,7 +150,7 @@
         url: '/success',
         templateUrl: '/modules/users/client/views/password/reset-password-success.client.view.html',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Password reset success'
         }
       })
@@ -160,7 +160,7 @@
         controller: 'PasswordController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin', 'manager'],
+          roles: [],
           pageTitle: 'Password reset form'
         }
       });
