@@ -10,7 +10,7 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'Listingproperties',
+      title: 'List Property',
       state: 'listingproperties',
       type: 'dropdown',
       roles: ['user','admin','manager', 'guest', '*']
