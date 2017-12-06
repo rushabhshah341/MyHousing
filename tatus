@@ -1,0 +1,204 @@
+[33mcommit c555767b3d006812ebb075c2960769b8159a6404[m
+Author: Rashmi Ruikar <rashmiramruikar@gmail.com>
+Date:   Tue Dec 5 21:07:20 2017 -0500
+
+    removed package and payment from update profile
+
+[33mcommit b4a2b3989fb4b91c8ed8d580fa5e7463235f33d3[m
+Author: Rashmi Ruikar <rashmiramruikar@gmail.com>
+Date:   Tue Dec 5 20:48:43 2017 -0500
+
+    added create package
+
+[33mcommit 667f70a7973dc709c807f461d241c2b8064f4202[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Dec 5 16:55:52 2017 -0500
+
+    Flagged property only visible if flagged greater than 4 times, Refresh data on Dashboard
+
+[33mcommit 1efb36623818a0fd024a6bc08ee754ca2cd4d82f[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Dec 5 15:42:06 2017 -0500
+
+    Property will be only visible if It is verified by Admin
+
+[33mcommit 590def7934e7dd9b8bf0212af374108d364d3a60[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Dec 5 15:41:10 2017 -0500
+
+    Property will be only visible if It is verified by Admin
+
+[33mcommit 3608f577dff7103f1930ceb94982926aa1c763f9[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Dec 5 15:17:22 2017 -0500
+
+    Property Flagging, Property Verification & Property delete by Admin
+
+[33mcommit f8f66163a90f218e87715ff41a7c14841d7ff9ec[m
+Author: Rashmi Ruikar <rashmiramruikar@gmail.com>
+Date:   Tue Dec 5 02:49:27 2017 -0500
+
+    Added expiration date
+
+[33mcommit 083874fb32178671f7f7c48e16656d5bffc72ff6[m
+Author: Rashmi Ruikar <rashmiramruikar@gmail.com>
+Date:   Sun Dec 3 23:32:58 2017 -0500
+
+    Added package module
+
+[33mcommit adedb58a107663fa792dada94b526c7ddd295206[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Nov 21 12:01:36 2017 -0500
+
+    google Maps API 1.0
+
+[33mcommit 8a7cfb6cdd540faf3da081f16f9f3953382134a7[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Nov 21 11:36:08 2017 -0500
+
+    google map p2
+
+[33mcommit 7c2d621d0d331ac4ea31682d16e1a9f4b5eec269[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Nov 21 11:07:52 2017 -0500
+
+    commiting default js
+
+[33mcommit 216e98f849c23066e2335abc05a5705c6d64461a[m
+Merge: 561bfb2 ee29c5b
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Nov 21 11:04:35 2017 -0500
+
+    Merge branch 'master' of https://github.com/rushabhshah341/MyHousing
+    
+    # Conflicts:
+    #       modules/listingproperties/client/controllers/listingproperties.client.controller.js
+    #       modules/listingproperties/server/models/listingproperty.server.model_bkp.js
+    #       modules/users/client/controllers/settings/dashboard.client.controller_bkp.js
+
+[33mcommit 561bfb25c1d135136c6571f95cb2749e8172429a[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Nov 21 10:42:47 2017 -0500
+
+    google map changes
+
+[33mcommit ee29c5be3c4a114b2e7849e354010513407d3797[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Nov 21 10:38:15 2017 -0500
+
+    Property Verification Partial code
+
+[33mcommit 6603f299a34c9c08f67132da8cb10d295d667438[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Nov 21 10:37:33 2017 -0500
+
+    map and dashboard client controller
+
+[33mcommit 76edd50ec6fd8eca1d42e2ad3b1f4e01f85ea46b[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Nov 21 01:46:24 2017 -0500
+
+    Flagging Property Working 1.0
+
+[33mcommit 103dc66afcb291eead0c43f5c1786f60d207bcbb[m
+Merge: f8cf882 d0b4d71
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Mon Nov 20 20:18:41 2017 -0500
+
+    app.log file
+
+[33mcommit d0b4d7194a89d5097fea8b3daf226a3a46f4f5c8[m
+Author: rforravipatel <rforravipatel@gmail.com>
+Date:   Mon Nov 20 19:52:27 2017 -0500
+
+    Dashboard added
+
+[33mcommit f8cf8827b79ff9d78b035285b76354919527b06f[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Mon Nov 20 16:29:38 2017 -0500
+
+    changes of dashboard and other services
+
+[33mcommit 018395e47e13427efaa3989c0cf33ca746dac831[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Mon Nov 20 13:19:44 2017 -0500
+
+    Flagging Property partial commit 1.0
+
+[33mcommit b228f65f97dfefe67f624331cdcf5885b981db68[m
+Author: vkpatel94 <31645438+vkpatel94@users.noreply.github.com>
+Date:   Sun Nov 5 00:12:12 2017 -0400
+
+    allpackages remaining
+
+[33mcommit 97c9c278bae96a292b72a73462c2dde6549d2441[m
+Author: vkpatel94 <31645438+vkpatel94@users.noreply.github.com>
+Date:   Sun Nov 5 00:11:00 2017 -0400
+
+    allpackages
+
+[33mcommit 568faa9aa49e4e49531204cd3aff05f2dc121151[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Oct 31 15:53:29 2017 -0400
+
+    added css and minor fiexes
+
+[33mcommit 3bdf5fd22116664b53baccec1e7fd06916f831bd[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Oct 31 13:49:44 2017 -0400
+
+    New commit after cherrypicking
+
+[33mcommit 7fc69056b325018a71ee97a959b991c89872ea3d[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Oct 31 13:55:11 2017 -0400
+
+    commenting out rentals
+
+[33mcommit 7694acce4aa795ca24d4a63b769787c1427403ab[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Oct 31 13:40:41 2017 -0400
+
+    nodemailer working in enquire module
+
+[33mcommit 5249dbef2bfa0f1b7943a3fa68854258a01c147a[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Tue Oct 31 13:13:31 2017 -0400
+
+    Enquire module Email code Working
+
+[33mcommit 0c5e4ffd8998583e136ef99bfc404b976f0fea73[m
+Author: viralsv2010 <viralsv2010@gmail.com>
+Date:   Mon Oct 30 21:28:51 2017 -0400
+
+    Added Enquire Module. Email sending is not working
+
+[33mcommit b0bf08a7cb9c6e2e61d6c9cbaae890f418aa2fdd[m
+Author: rforravipatel <rforravipatel@gmail.com>
+Date:   Mon Oct 30 18:38:39 2017 -0400
+
+    logo css added
+
+[33mcommit 0b40353b4b8a1c1cbe59ad25cad7d5cd30fa33ba[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Mon Oct 30 16:22:13 2017 -0400
+
+    all code
+
+[33mcommit cbf860a27a6c624f669000925e74d69539a263f9[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Fri Oct 6 13:28:56 2017 -0400
+
+    Added all Folders
+
+[33mcommit 487ddca81948cdf658ddeeb5ef4c84645a9c7b62[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Oct 3 23:26:40 2017 -0400
+
+    Add files via upload
+
+[33mcommit 3bdc2bd3cbadc88b93f4367911e08880339a5293[m
+Author: Rushabh <rushabhshah341@gmail.com>
+Date:   Tue Oct 3 23:24:13 2017 -0400
+
+    Initial commit
