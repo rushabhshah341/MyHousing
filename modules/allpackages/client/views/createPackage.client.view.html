@@ -1,0 +1,54 @@
+<section id="main">
+  <div class="page-header">
+
+  </div>
+  <div class="container">
+    <form name="vm.form.allpackageForm" class="form-horizontal" ng-submit="vm.save(vm.form.allpackageForm.$valid)"
+          novalidate>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           <h3 class="panel-title">Choose package</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped table-hover">
+              <thead>
+              <tr>
+                <th>Package Name</th>
+                <th>Properties</th>
+                <th>Price</th>
+              </tr>
+              <tr>
+                <td>Gold</td>
+                <td>20</td>
+                <td>$100</td>
+                <td><div class="form-group">
+                  <button type="submit" class="btn btn-default" ng-click="vm.pn()">{{vm.allpackage._id ? 'Update' : 'Select'}} Gold</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td>Silver</td>
+                <td>10</td>
+                <td>$50</td>
+                <td><div class="form-group">
+                  <button type="submit" class="btn btn-default" ng-click="vm.pn1()">{{vm.allpackage._id ? 'Update' : 'Select'}} Silver</button>
+                </div></td>
+              </tr>
+              <tr>
+                <td>Platinum</td>
+                <td>5</td>
+                <td>$150</td>
+                <td><div class="form-group">
+                  <button type="submit" class="btn btn-default" ng-click="vm.pn2()">{{vm.allpackage._id ? 'Update' : 'Select'}} Platinum</button>
+                </div></td>
+              </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

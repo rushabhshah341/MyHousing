@@ -1,0 +1,146 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select package</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/component.css">
+</head>
+<body>
+<div class="container">
+  <section>
+    <div class="page-header">
+      <h1>{{vm.allpackage._id ? 'Edit Allpackage' : 'New Allpackage'}}</h1>
+    </div>
+    <div class="col-md-12">
+      &lt;!&ndash;<form name="vm.form.allpackageForm" class="form-horizontal" ng-submit="vm.save(vm.form.allpackageForm.$valid)"
+            novalidate>&ndash;&gt;
+        <div class="package package&#45;&#45;yonten">
+          <div class="package__item">
+            &lt;!&ndash;<div class="icon icon&#45;&#45;home"></div>&ndash;&gt;
+            <h3 class="package__title">Gold</h3>
+            <div class="package__price"><span class="package__currency">$</span>200<span
+              class="package__period">/ year</span></div>
+            <ul class="package__feature-list">
+              <li class="package__feature">Advertize upto 20 properties{{vm.allpackage._id}}</li>
+            </ul>
+            <label class="control-label">{{vm.allpackage._id}} rashmi</label>
+            <button class="package__action" onclick="{{vm.form.allpackageForm}}">Choose plan</button>
+          </div>
+          <div class="package__item">
+            &lt;!&ndash;<div class="icon icon&#45;&#45;home"></div>&ndash;&gt;
+            <h3 class="package__title">Silver</h3>
+            <div class="package__price"><span class="package__currency">$</span>150<span
+              class="package__period">/ year</span></div>
+            <ul class="package__feature-list">
+              <li class="package__feature">Advertize upto 10</li>
+            </ul>
+            <button class="package__action" onclick="{{vm.allpackage._id ? 'Update' : 'Create'}}"></button>
+          </div>
+          <div class="package__item">
+            &lt;!&ndash;<div class="icon icon&#45;&#45;home"></div>&ndash;&gt;
+            <h3 class="package__title">Platinum</h3>
+            <div class="package__price"><span class="package__currency">$</span>100<span
+              class="package__period">/ year</span></div>
+            <ul class="package__feature-list">
+              <li class="package__feature">Advertize upto 5 properties</li>
+            </ul>
+            <button class="package__action"> {{vm.allpackage._id ? 'Update' : 'Create'}}>Choose plan</button>
+          </div>
+        </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
+&lt;!&ndash; <fieldset>
+   <div class="form-group" show-errors>
+     <label class="control-label" for="packageName">Package Name</label>
+     <input name="name" type="text" ng-model="vm.allpackage.packageName" id="packageName" class="form-control" placeholder="Package Name" required>
+     <div ng-messages="vm.form.allpackageForm.packageName.$error" role="alert">
+       <p class="help-block error-text" ng-message="required">Please enter Package name.</p>
+     </div>
+   </div>
+     <div class="form-group" show-errors>
+       <label class="control-label" for="packageType">Package Type</label>
+       <input name="name" type="text" ng-model="vm.allpackage.packageType" id="packageType" class="form-control" placeholder="package Type" required>
+       <div ng-messages="vm.form.allpackageForm.packageType.$error" role="alert">
+         <p class="help-block error-text" ng-message="required">Allpackage name is required.</p>
+       </div>
+     </div>
+
+   <div class="form-group" show-errors>
+     <label class="control-label" for="price">price</label>
+     <input name="name" type="number" ng-model="vm.allpackage.price" id="price" class="form-control" placeholder="price" required>
+     <div ng-messages="vm.form.allpackageForm.price.$error" role="alert">
+       <p class="help-block error-text" ng-message="required">Allpackage name is required.</p>
+     </div>
+   </div>
+
+   <div class="form-group">
+     <button type="submit" class="btn btn-default">{{vm.allpackage._id ? 'Update' : 'Create'}}</button>
+   </div>
+   <div ng-show="vm.error" class="text-danger">
+     <strong ng-bind="vm.error"></strong>
+   </div>
+ </fieldset>&ndash;&gt;
+&lt;!&ndash;
+</form>
+</div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select package</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/component.css">
+</head>
+<body>
+<div class="container">
+  <section class="package-section bg-4">
+    <h2 class="intro">Choose package</h2>
+    <div class="package package&#45;&#45;yonten">
+      <div class="package__item">
+        &lt;!&ndash;<div class="icon icon&#45;&#45;home"></div>&ndash;&gt;
+        <h3 class="package__title">Gold</h3>
+        <div class="package__price"><span class="package__currency">$</span>200<span
+          class="package__period">/ year</span></div>
+        <ul class="package__feature-list">
+          <li class="package__feature">Advertize upto 20 properties</li>
+        </ul>
+        <button class="package__action" onclick="window.location.href='payment'">Choose plan</button>
+      </div>
+      <div class="package__item">
+        &lt;!&ndash;<div class="icon icon&#45;&#45;home"></div>&ndash;&gt;
+        <h3 class="package__title">Silver</h3>
+        <div class="package__price"><span class="package__currency">$</span>150<span
+          class="package__period">/ year</span></div>
+        <ul class="package__feature-list">
+          <li class="package__feature">Advertize upto 10 properties</li>
+        </ul>
+        <button class="package__action" onclick="window.location.href='payment'">Choose plan</button>
+      </div>
+      <div class="package__item">
+        &lt;!&ndash;<div class="icon icon&#45;&#45;home"></div>&ndash;&gt;
+        <h3 class="package__title">Platinum</h3>
+        <div class="package__price"><span class="package__currency">$</span>100<span
+          class="package__period">/ year</span></div>
+        <ul class="package__feature-list">
+          <li class="package__feature">Advertize upto 5 properties</li>
+        </ul>
+        <button class="package__action" onclick="window.location.href='payment'">Choose plan</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
+&ndash;&gt;
+-->
