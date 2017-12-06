@@ -30,7 +30,7 @@
       // Functions
       // --------------------------------------------------------------
 
-      googleMapService.refreshSearch = function (latitude, longitude, filteredResults) {z
+      googleMapService.refreshSearch = function (latitude, longitude, filteredResults) {
         console.log(filteredResults);
         // Clears the holding array of locations
         locations = [];
