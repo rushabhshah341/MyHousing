@@ -38,6 +38,7 @@
   <label>Property Description: </label><p class="lead" ng-bind="vm.listingproperty.propertydescription"></p>
   <label>Price: </label><span class="lead" ng-bind="vm.listingproperty.price"></span><br />
   <label>No of bedrooms: </label><span ng-bind="vm.listingproperty.noofbedroom" ></span><br />
+  <label ng-if="vm.authentication.user">Contact Number: </label><span ng-bind="vm.listingproperty.contactnumber" ng-if="vm.authentication.user"></span><br />
   <label>city: </label><span ng-bind="vm.listingproperty.city" ></span><br />
   <label>unit #: </label><span ng-bind="vm.listingproperty.unit" ></span><br />
   <label></label>
@@ -47,12 +48,12 @@
      a initial position must be set because it will prompt the users current geolocation and set it to that
 </map> -->
 
-Latitude: 
+Latitude:
 <p class="lead" ng-bind="vm.listingproperty.lat">{{vm.listingproperty.lat}}</p>
-Longitude: 
+Longitude:
 <p class="lead" ng-bind="vm.listingproperty.lon">{{vm.listingproperty.lon}}</p>
 <script>console.log(vm.listingroperty.lat + vm.listingproperty.lon);</script>
 <map center="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" zoom ='15'>
 <marker position="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" visible="true"></marker>
 </map>
- 
+

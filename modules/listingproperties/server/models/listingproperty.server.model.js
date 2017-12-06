@@ -80,6 +80,11 @@ lon:{
     default: 0,
     trim: true
 },
+  contactnumber: {
+    type: Number,
+    default: '',
+    required: 'Please enter Phone number'
+  },
   propertyVerificationFlag: {
     type: Number,
     default: '0'

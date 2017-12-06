@@ -1,0 +1,96 @@
+<!--<!doctype html>-->
+<!--&lt;!&ndash; Declares meanMapApp as the starting Angular module &ndash;&gt;-->
+<!--<html class="no-js" ng-app="propertyportal">-->
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<title></title>-->
+    <!--<meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--&lt;!&ndash; CSS &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="../../../../bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="../css/style.css"/>-->
+
+    <!--&lt;!&ndash; Google Maps API &ndash;&gt;-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrn605l7RPadiwdzsOlRw9O28lxfYBJ6s"></script>-->
+    <!--&lt;!&ndash; Modernizr &ndash;&gt;-->
+    <!--<script src="../../../../bower_components/modernizr/bin/modernizr"></script>-->
+    <!--&lt;!&ndash; JS Source &ndash;&gt;-->
+    <!--<script src="../../../../bower_components/jquery/jquery.js"></script>-->
+    <!--<script src="../../../../bower_components/angular/angular.js"></script>-->
+    <!--<script src="../../../../bower_components/angular-route/angular-route.js"></script>-->
+    <!--<script src="../../../../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>-->
+
+<!--</head>-->
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li active><a href="index.html">Add Properties</a></li>
+            <li disabled><a href="Queryform.html">Search Properties</a></li>
+        </ul>
+        <h3 class="text-muted"></h3>
+    </div>
+    <!-- Map and Side Panel -->
+    <div class="row content">
+        <!-- Google Map -->
+        <div class="col-md-7">
+            <div id="map"></div>
+        </div>
+        <!-- Side Panel -->
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <!-- Panel Title -->
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center"><span class="glyphicon glyphicon-map-marker"></span></h2>
+                </div>
+                <!-- Panel Body -->
+                <div class="panel-body">
+                    <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
+                    <!--<form name ="queryForm">-->
+
+                        <!--&lt;!&ndash; Note ng-model binds the values to Angular $scope &ndash;&gt;-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="address">Address Query</label>-->
+                            <!--<input type="text" class="form-control" id="address" ng-model="formData.address">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="distance">Max. Distance (miles)</label>-->
+                            <!--<input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">-->
+                        <!--</div>-->
+
+
+                        <!--&lt;!&ndash; Query button. Note that its tied to queryUsers() function from queryCtrl.  &ndash;&gt;-->
+                        <!--<button type="submit" class="btn btn-danger btn-block" ng-click="queryUsers()">Search</button>-->
+                    <!--</form>-->
+                  <form name="vm.form.propertylistmapForm" class="form-horizontal" novalidate>
+                    <fieldset>
+                      <div class="form-group">
+                        <label class="control-label" for="address">Address</label>
+                        <input name="Address" type="text" ng-model="vm.listingproperty.address" id="address" class="form-control" placeholder="Enter Address" required>
+                        <div ng-messages="vm.form.listingpropertyForm.address.$error" role="alert">
+                          <p class="help-block error-text" ng-message="required">property Address is required.</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" for="address">Distance</label>
+                        <input name="Distance" type="text" ng-model="vm.listingproperty.distance" id="distance" class="form-control" placeholder="Enter miles" required>
+                        <div ng-messages="vm.form.listingpropertyForm.distance.$error" role="alert">
+                          <p class="help-block error-text" ng-message="required">miles are required.</p>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-default" ng-click="vm.queryUsers()">{{vm.propertylistmap._id ? 'Update' : 'list'}}</button>
+                      </div>
+                      <div ng-show="vm.error" class="text-danger">
+                        <strong ng-bind="vm.error"></strong>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</div>
+
