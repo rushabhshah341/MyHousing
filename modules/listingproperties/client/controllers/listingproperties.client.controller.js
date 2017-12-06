@@ -18,7 +18,7 @@
     vm.remove = remove;
     vm.save = save;
     vm.flagVal = flagVal;
-    vm.routeToEnquiry = routeToEnquiry;
+    // vm.routeToEnquiry = routeToEnquiry;
 
     // vm.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
     // $scope.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
@@ -41,27 +41,27 @@ function flagVal(){
   });
 }
 
-$scope.create = function() {
-  var listingproperties = new listingproperty({
-      title: this.title,
-      content: this.content,
-      ///
-      lon: this.lon,
-      lat: this.lat
-      ///
-  });
-  listingproperties.$save(function(response) {
-      $location.path('listingproperties/' + response._id);
-      $scope.title = '';
-      $scope.content = '';
-      ///
-      $scope.lon = 0;
-      $scope.lat = 0;
-      ///
-  }, function(errorResponse) {
-      $scope.error = errorResponse.data.message;
-  });
-};
+// $scope.create = function() {
+//   var listingproperties = new listingproperty({
+//       title: this.title,
+//       content: this.content,
+//       ///
+//       lon: this.lon,
+//       lat: this.lat
+//       ///
+//   });
+//   listingproperties.$save(function(response) {
+//       $location.path('listingproperties/' + response._id);
+//       $scope.title = '';
+//       $scope.content = '';
+//       ///
+//       $scope.lon = 0;
+//       $scope.lat = 0;
+//       ///
+//   }, function(errorResponse) {
+//       $scope.error = errorResponse.data.message;
+//   });
+// };
 
 $scope.$on('mapInitialized', function(event,map) {
   var marker = map.markers[0];
@@ -121,6 +121,7 @@ function geocode(){
       if (vm.listingproperty._id) {
         vm.listingproperty.$update(successCallback, errorCallback);
       } else {
+        console.log(vm.listingproperty.propertyImageURL);
         vm.listingproperty.$save(successCallback, errorCallback);
       }
 

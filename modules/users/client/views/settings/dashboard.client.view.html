@@ -35,7 +35,7 @@
               </table>
 
               <div class="bodycontainer scrollable">
-                <table class="table table-striped table-hover table-scrollable">
+                <table class="table table-striped table-hover table-scrollable" ng-model="loadData" >
                   <tr ng-repeat="x in names" ng-if="x.flagValue > 4">
                     <td>{{ x.name }}</td>
                     <td>{{ x.address }}</td>
