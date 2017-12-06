@@ -20,6 +20,7 @@
         controller: 'ListingpropertiesListController',
         controllerAs: 'vm',
         data: {
+          roles: ['user', 'admin', 'manager', 'guest', '*'],
           pageTitle: 'Listingproperties List'
         }
       })
@@ -32,7 +33,7 @@
           listingpropertyResolve: newListingproperty
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin', 'manager'],
           pageTitle: 'Listingproperties Create'
         }
       })
