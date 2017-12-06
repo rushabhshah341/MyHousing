@@ -23,16 +23,17 @@
     });
 
     // Add the dropdown create item
-    menuService.addSubMenuItem('topbar', 'allpackages', {
+   /* menuService.addSubMenuItem('topbar', 'allpackages', {
       title: 'Select package',
       state: 'allpackages.create',
       roles: ['user']
     });
-
-    menuService.addSubMenuItem('topbar', 'allpackages', {
+*/
+    /*menuService.addSubMenuItem('topbar', 'allpackages', {
       title: 'Update Package',
       state: 'allpackages.edit',
+      reloadOnSearch: true,
       roles: ['user']
-    });
+    });*/
   }
 }());
