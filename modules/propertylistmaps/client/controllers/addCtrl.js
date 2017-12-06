@@ -131,6 +131,8 @@
           longitude: parseFloat(long),
           latitude: parseFloat(lat),
           distance: parseFloat($scope.vm.listingproperty.distance),
+          noofbedroom:$scope.vm.listingproperty.noofbedroom,
+          price:$scope.vm.listingproperty.price
 
         };
 
@@ -142,6 +144,8 @@
             console.log(queryResults);
             $scope.vm.listingproperty.address = "";
             $scope.vm.listingproperty.distance = "";
+            $scope.vm.listingproperty.noofbedroom = "";
+            $scope.vm.listingproperty.price = "";
 
             // Pass the filtered results to the Google Map Service and refresh the map
             gservice.refreshSearch(queryBody.latitude, queryBody.longitude, queryResults);

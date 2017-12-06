@@ -78,6 +78,22 @@
                         </div>
                       </div>
 
+                      <div class="form-group">
+                        <label class="control-label" for="noofbedroom">No of bedroom</label>
+                        <input name="noofbedroom" type="text" ng-model="vm.listingproperty.noofbedroom" id="noofbedroom" class="form-control" placeholder="Enter Number of bedroom" required>
+                        <div ng-messages="vm.form.listingpropertyForm.noofbedroom.$error" role="alert">
+                          <p class="help-block error-text" ng-message="required">miles are required.</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label" for="price">Maximum Price</label>
+                        <input name="price" type="text" ng-model="vm.listingproperty.price" id="price" class="form-control" placeholder="Enter price" required>
+                        <div ng-messages="vm.form.listingpropertyForm.price.$error" role="alert">
+                          <p class="help-block error-text" ng-message="required">Price is required.</p>
+                        </div>
+                      </div>
+
 
                       <div class="form-group">
                         <button type="submit" class="btn btn-default" ng-click="vm.queryUsers()">{{vm.propertylistmap._id ? 'Update' : 'list'}}</button>

@@ -30,7 +30,7 @@
       // Functions
       // --------------------------------------------------------------
 
-      googleMapService.refreshSearch = function (latitude, longitude, filteredResults) {
+      googleMapService.refreshSearch = function (latitude, longitude, filteredResults) {z
         console.log(filteredResults);
         // Clears the holding array of locations
         locations = [];
@@ -138,7 +138,7 @@
 
           // Create a new map and place in the index.html page
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 3,
+            zoom:4 ,
             center: myLatLng
           });
         }
