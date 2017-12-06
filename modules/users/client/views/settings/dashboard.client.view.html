@@ -1,5 +1,5 @@
   <section id="main" ng-controller="HeaderController">
-    <div class="container">
+    <div class="">
       <div class="row">
         <!--<div class="col-md-3">-->
           <!--<div class="list-group">-->
@@ -14,7 +14,7 @@
         <!--</div>-->
         <!-- <pre>value = {{ADMIN}}</pre>-->
         <div ng-if="ADMIN">
-          <div class="col-md-9">
+          <div class="col-md-12">
             <div class="">
               <button class="btn btn-success" style="margin-left: 740px; margin-bottom: 10px;" ng-click="loadData()">Refresh Data</button>
             </div>
@@ -24,24 +24,20 @@
               <h3 class="panel-title">List of Flagged Properties</h3>
             </div>
             <div class="panel-body">
-              <table class="table table-striped table-hover">
+              <table class="table table-striped table-hover table-scrollable" ng-model="loadData">
                 <thead>
                 <tr >
-                  <th align="center">Firstname</th>
-                  <th align="center">Address</th>
-                  <th align="center">Number of flags</th>
-                  <th align="center">Action</th>
+                  <th align="center" class="text-center">Firstname</th>
+                  <th align="center" class="text-center">Address</th>
+                  <th align="center" class="text-center">Number of flags</th>
+                  <th align="center" class="text-center">Action</th>
                 </tr>
                 </thead>
-              </table>
-
-              <div class="bodycontainer scrollable">
-                <table class="table table-striped table-hover table-scrollable" ng-model="loadData" >
                   <tr ng-repeat="x in names" ng-if="x.flagValue > 4">
-                    <td>{{ x.name }}</td>
-                    <td>{{ x.address }}</td>
-                    <td>{{ x.flagValue }}</td>
-                    <td ><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.remove(x)">
+                    <td class="text-center">{{ x.name }}</td>
+                    <td class="text-center">{{ x.address }}</td>
+                    <td class="text-center">{{ x.flagValue }}</td>
+                    <td class="text-center"><a class="btn btn-primary" value="{{x._id}}"  ng-click="vm.remove(x)">
                       <i class="glyphicon glyphicon-trash"></i>
                     </a>
                      <!--<td><button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button></td>-->
@@ -55,7 +51,7 @@
 
 
 
-        <div class="col-md-9">
+        <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
               <!-- Flagged Properties -->
