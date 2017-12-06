@@ -102,10 +102,10 @@ function geocode(){
     }
 
 
-    $http.get('api/allpackages',function(item){
-      $scope.packageType = item;
-      console.log($scope.packageType);
-    });
+    // $http.get('api/allpackages',function(item){
+    //   $scope.packageType = item;
+    //   console.log($scope.packageType);
+    // });
 
 
     // Save Listingproperty
