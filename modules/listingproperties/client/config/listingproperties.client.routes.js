@@ -32,7 +32,7 @@
           listingpropertyResolve: newListingproperty
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin', 'manager'],
           pageTitle: 'Listingproperties Create'
         }
       })
