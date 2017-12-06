@@ -6,7 +6,7 @@
     .module('allpackages')
     .controller('AllpackagesController', AllpackagesController);
 
-  AllpackagesController.$inject = ['$scope', '$state', '$window', 'Authentication', 'allpackageResolve'];
+  AllpackagesController.$inject = ['$scope', '$state', '$window', 'Authentication', 'allpackageResolve','Notification'];
 
   function AllpackagesController ($scope, $state, $window, Authentication, allpackage, Notification) {
     var vm = this;
