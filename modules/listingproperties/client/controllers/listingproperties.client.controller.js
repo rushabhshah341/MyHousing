@@ -18,7 +18,7 @@
     vm.remove = remove;
     vm.save = save;
     vm.flagVal = flagVal;
-    vm.routeToEnquiry = routeToEnquiry;
+  //  vm.routeToEnquiry = routeToEnquiry;
 
     // vm.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
     // $scope.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
