@@ -20,6 +20,11 @@
     });
 
     menuService.addSubMenuItem('account', 'settings', {
+      title: 'Dashboard',
+      state: 'settings.dashboard'
+    });
+
+    menuService.addSubMenuItem('account', 'settings', {
       title: 'Edit Profile',
       state: 'settings.profile'
     });
