@@ -45,6 +45,14 @@
         </div>
 
         <div class="form-group">
+          <label class="control-label" for="email">Email</label>
+          <input name="email" type="text" ng-model="vm.listingproperty.email" id="email" class="form-control" placeholder="Enter your Email" required>
+          <div ng-messages="vm.form.listingpropertyForm.email.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">property unit is required.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
           <label class="control-label" for="noofbedroom" >Number of bedrooms</label>
           <input name="noofbedroom" type="number" pattern="^\d+$" ng-model="vm.listingproperty.noofbedroom" id="noofbedroom" class="form-control" placeholder="Enter number of bedrooms" required>
           <div ng-messages="vm.form.listingpropertyForm.noofbedroom.$error" role="alert">
