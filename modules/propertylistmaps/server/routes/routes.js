@@ -48,6 +48,9 @@ module.exports = function(app) {
         var distance = req.body.distance;
         var lat = req.body.latitude;
         var long = req.body.longitude;
+      var noofbedroom = req.body.noofbedroom;
+      var price= req.body.price;
+
         console.log(lat, long,distance);
         var query = User.find({});
 
@@ -55,6 +58,13 @@ module.exports = function(app) {
 
             // Converting meters to miles. Specifying spherical geometry (for globe)
             maxDistance: distance * 1609.34, spherical: true});
+
+      if(noofbedroom){
+        query = query.where('noofbedroom').gte(noofbedroom);
+      }
+      if(price){
+        query = query.where('price').gte(price);
+      }
 
       console.log(query);
         //

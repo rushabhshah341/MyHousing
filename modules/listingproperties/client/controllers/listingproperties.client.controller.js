@@ -18,6 +18,7 @@
     vm.remove = remove;
     vm.save = save;
     vm.flagVal = flagVal;
+    vm.routeToEnquiry = routeToEnquiry;
 
     // vm.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
     // $scope.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
@@ -150,6 +151,13 @@ function geocode(){
       });
     }
 
+  //   function routeToEnquiry(){
+  //       console.log("Inside Route to Enquiry.");
+  //     $location.path('/enquires');
+  //     //$window.location.href = '/modules/listingproperties/client/views/enquire-listingproperty.client.view.html';
+  // //      console.log($location.url('listingproperties.enquire'));
+  //
+  //   }
     // function propertyVerification(){
     //   console.log("Property Flag verification.");
     //   listingproperty.propertyVerificationFlag = 1;

@@ -11,10 +11,10 @@
     var vm = this;
 
     //
-    // vm.accountMenu = menuService.getMenu('account').items[0];
-    // vm.authentication = Authentication;
-    // vm.isCollapsed = false;
-    // vm.menu = menuService.getMenu('topbar');
+    vm.accountMenu = menuService.getMenu('account').items[0];
+    vm.authentication = Authentication;
+    vm.isCollapsed = false;
+    vm.menu = menuService.getMenu('topbar');
     if (!Authentication.user) {
       $location.path('/');
     }else{
@@ -23,10 +23,10 @@
       //console.log(Authentication.user.roles.indexOf("admin"));
       //console.log("vm.admin Val :: " + $scope.ADMIN);
       //console.log("vm.user Val :: " + $scope.userFlag);
-      vm.accountMenu = menuService.getMenu('account').items[0];
-      vm.authentication = Authentication;
-      vm.isCollapsed = false;
-      vm.menu = menuService.getMenu('topbar');
+      // vm.accountMenu = menuService.getMenu('account').items[0];
+      // vm.authentication = Authentication;
+      // vm.isCollapsed = false;
+      // vm.menu = menuService.getMenu('topbar');
     }
     $scope.$on('$stateChangeSuccess', stateChangeSuccess);
 

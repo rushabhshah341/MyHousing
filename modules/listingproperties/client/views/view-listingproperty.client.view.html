@@ -2,7 +2,7 @@
   <div class="page-header">
     <h1 ng-bind="vm.listingproperty.name"></h1>
   </div>
-  <div class="pull-right"
+  <div class="pull-right" style="margin: 5px"
        ng-show="vm.listingproperty.isCurrentUserOwner">
     <a class="btn btn-primary"
        ui-sref="listingproperties.edit({ listingpropertyId: vm.listingproperty._id })">
@@ -13,6 +13,11 @@
     </a>
     <a class="btn btn-primary" ng-click="vm.flagVal()">
       <i class="glyphicon glyphicon-flag"></i>
+    </a>
+  </div>
+  <div class="pull-right" style="margin: 5px">
+    <a class="btn btn-primary" ng-click="vm.routeToEnquiry()">
+    <i class="glyphicon glyphicon-question-sign"></i>
     </a>
   </div>
   <small>
