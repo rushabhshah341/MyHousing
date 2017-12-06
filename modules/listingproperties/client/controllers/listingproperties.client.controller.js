@@ -6,9 +6,9 @@
     .module('listingproperties')
     .controller('ListingpropertiesController', ListingpropertiesController);
 
-  ListingpropertiesController.$inject = ['$scope', '$state', '$http', '$location', '$window', 'Authentication', 'listingpropertyResolve', 'ListingpropertiesService', 'Notification'];
+  ListingpropertiesController.$inject = ['$scope', '$state', '$http', '$rootScope','$location', '$window', 'Authentication', 'listingpropertyResolve', 'ListingpropertiesService', 'Notification'];
 
-  function ListingpropertiesController($scope, $state, $http, $location, $window, Authentication, listingproperty, ListingpropertiesService, Notification) {
+  function ListingpropertiesController($scope, $state, $http, $rootScope, $location, $window, Authentication, listingproperty, ListingpropertiesService, Notification) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -31,15 +31,15 @@
 // }
 //     }
 
-function flagVal(){
- listingproperty.flagValue += 1;
- console.log("fagValue :: " + listingproperty.flagValue);
- $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
-      Notification.success('Property flagged successfully');
-  }).error(function() {
-      Notification.error('Property flagged successfully');
-  });
-}
+// function flagVal(){
+//  listingproperty.flagValue += 1;
+//  console.log("fagValue :: " + listingproperty.flagValue);
+//  $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
+//       Notification.success('Property flagged successfully');
+//   }).error(function() {
+//       Notification.error('Property flagged successfully');
+//   });
+// }
 
 // $scope.create = function() {
 //   var listingproperties = new listingproperty({
@@ -152,13 +152,21 @@ function geocode(){
       });
     }
 
-  //   function routeToEnquiry(){
-  //       console.log("Inside Route to Enquiry.");
-  //     $location.path('/enquires');
+    function routeToEnquiry(){
+        console.log("Inside Route to Enquiry.");
+      $location.path('/enquires');
+
+      $http.get('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function(data) {
+        vm.names = data;
+        console.log("Enquire Data" + data + " id :: "+ listingproperty._id);
+        Notification.success('Property data got');
+      }).error(function() {
+        Notification.error('Property data failed');
+      });
   //     //$window.location.href = '/modules/listingproperties/client/views/enquire-listingproperty.client.view.html';
   // //      console.log($location.url('listingproperties.enquire'));
   //
-  //   }
+    }
     // function propertyVerification(){
     //   console.log("Property Flag verification.");
     //   listingproperty.propertyVerificationFlag = 1;
@@ -170,6 +178,7 @@ function geocode(){
     //     Notification.error('Property verification failed');
     //   });
     // }
+
 
     };
 

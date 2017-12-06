@@ -20,16 +20,18 @@
     <i class="glyphicon glyphicon-question-sign"></i>
     </a>
   </div>
-  <small>
-    <em class="text-muted">
-      Posted on
-      <span ng-bind="vm.listingproperty.created | date:'mediumDate'"></span>
-      by
-      <span ng-if="vm.listingproperty.user"
-            ng-bind="vm.listingproperty.user.displayName"></span>
-      <span ng-if="!vm.listingproperty.user">Deleted User</span>
-    </em>
-  </small><br>
+
+  <!--<small>-->
+  <!--<em class="text-muted">-->
+  <!--Posted on-->
+  <!--<span ng-bind="vm.listingproperty.created | date:'mediumDate'"></span>-->
+  <!--by-->
+  <!--<span ng-if="vm.listingproperty.user"-->
+  <!--ng-bind="vm.listingproperty.user.displayName"></span>-->
+  <!--<span ng-if="!vm.listingproperty.user">Deleted User</span>-->
+  <!--</em>-->
+  <!--</small><br>-->
+
   <!-- <div
   angular-google-maps-geocoder placeid="{{ vm.my_place_id }}"
   output="out"
@@ -39,26 +41,82 @@
 ></div>
 <pre>{{ out | json }}</pre> -->
 
-  <label></label><span class="lead" ng-bind="vm.listingproperty.address"></span><br />
-  <label>Property Description: </label><p class="lead" ng-bind="vm.listingproperty.propertydescription"></p>
-  <label>Price: </label><span class="lead" ng-bind="vm.listingproperty.price"></span><br />
-  <label>No of bedrooms: </label><span ng-bind="vm.listingproperty.noofbedroom" ></span><br />
-  <label ng-if="vm.authentication.user">Contact Number: </label><span ng-bind="vm.listingproperty.contactnumber" ng-if="vm.authentication.user"></span><br />
-  <label>city: </label><span ng-bind="vm.listingproperty.city" ></span><br />
-  <label>unit #: </label><span ng-bind="vm.listingproperty.unit" ></span><br />
-  <label></label>
+
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <script>console.log(vm.listingroperty.lat + vm.listingproperty.lon);</script>
+      <map center="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" zoom ='15'>
+        <marker position="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" visible="true"></marker>
+      </map>
+
+      <div class="panel panel-default" style="margin-top: 20px">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+          <label></label><span class="lead" ng-bind="vm.listingproperty.address"></span><br />
+          <small>
+            <em class="text-muted">
+              Posted on
+              <span ng-bind="vm.listingproperty.created | date:'mediumDate'"></span>
+              by
+              <span ng-if="vm.listingproperty.user"
+                    ng-bind="vm.listingproperty.user.displayName"></span>
+              <span ng-if="!vm.listingproperty.user">Deleted User</span>
+            </em>
+          </small><br>
+        </div>
+
+        <!-- List group -->
+        <ul class="list-group">
+          <li class="list-group-item">
+            <label>Property Description: </label><p ng-bind="vm.listingproperty.propertydescription"></p>
+          </li>
+          <li class="list-group-item">
+            <label>Price: </label><p ng-bind="vm.listingproperty.price"></p>
+          </li>
+          <li class="list-group-item">
+            <label>Number of bedrooms: </label><p ng-bind="vm.listingproperty.noofbedroom" ></p>
+          </li>
+          <li class="list-group-item">
+            <label>City: </label><p ng-bind="vm.listingproperty.city" ></p>
+          </li>
+          <li class="list-group-item">
+            <label># of Unit : </label><p ng-bind="vm.listingproperty.unit" ></p>
+          </li>
+          <li class="list-group-item">
+            <label ng-if="vm.authentication.user">Contact Number: </label><p ng-bind="vm.listingproperty.contactnumber" ng-if="vm.authentication.user"></p>          </li>
+        </ul>
+
+      </div>
+
+      <!--<label></label><span class="lead" ng-bind="vm.listingproperty.address"></span><br />-->
+      <!--<label>Property Description: </label><p class="lead" ng-bind="vm.listingproperty.propertydescription"></p>-->
+      <!--<label>Price: </label><span class="lead" ng-bind="vm.listingproperty.price"></span><br />-->
+      <!--<label>No of bedrooms: </label><span ng-bind="vm.listingproperty.noofbedroom" ></span><br />-->
+      <!--<label ng-if="vm.authentication.user">Contact Number: </label><span ng-bind="vm.listingproperty.contactnumber" ng-if="vm.authentication.user"></span><br />-->
+      <!--<label>city: </label><span ng-bind="vm.listingproperty.city" ></span><br />-->
+      <!--<label>unit #: </label><span ng-bind="vm.listingproperty.unit" ></span><br />-->
+      <!--<label></label>-->
+    </div>
+    <div class="col-md-8">
+      <div class="thumbnail" style="width: 90%; height: auto">
+        <img src="modules/listingproperties/client/img/property2.jpg" />
+      </div>
+    </div>
+  </div>
 </section>
 <!-- <map zoom ='6'>
   <marker position="[0,0]" visible="true"> </marker>
      a initial position must be set because it will prompt the users current geolocation and set it to that
 </map> -->
 
-Latitude:
-<p class="lead" ng-bind="vm.listingproperty.lat">{{vm.listingproperty.lat}}</p>
-Longitude:
-<p class="lead" ng-bind="vm.listingproperty.lon">{{vm.listingproperty.lon}}</p>
-<script>console.log(vm.listingroperty.lat + vm.listingproperty.lon);</script>
-<map center="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" zoom ='15'>
-<marker position="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" visible="true"></marker>
-</map>
+<!--Latitude:-->
+<!--<p class="lead" ng-bind="vm.listingproperty.lat">{{vm.listingproperty.lat}}</p>-->
+<!--Longitude:-->
+<!--<p class="lead" ng-bind="vm.listingproperty.lon">{{vm.listingproperty.lon}}</p>-->
+
+
+
+
 

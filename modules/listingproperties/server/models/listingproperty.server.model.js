@@ -16,6 +16,12 @@ var ListingpropertySchema = new Schema({
     required: 'Please fill property name',
     trim: true
   },
+  email: {
+    type: String,
+    default: '',
+    required: 'Please Enter Email',
+    trim: true
+  },
   address: {
     type: String,
     default: '',

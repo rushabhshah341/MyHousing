@@ -23,10 +23,10 @@
     });
 
     // Add the dropdown create item
-    menuService.addSubMenuItem('topbar', 'enquires', {
-      title: 'Create Enquire',
-      state: 'enquires.create',
-      roles: ['user']
-    });
+    // menuService.addSubMenuItem('topbar', 'enquires', {
+    //   title: 'Create Enquire',
+    //   state: 'enquires.create',
+    //   roles: ['user']
+    // });
   }
 }());

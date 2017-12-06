@@ -13,14 +13,14 @@
       title: 'Package',
       state: 'allpackages',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['manager','user','admin']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'allpackages', {
       title: 'View Packages',
       state: 'allpackages.list',
-      roles: ['*']
+      roles: ['manager','user','admin']
     });
 
     // Add the dropdown create item
