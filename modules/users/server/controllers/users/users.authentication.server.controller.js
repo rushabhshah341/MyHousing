@@ -21,9 +21,15 @@ var noReturnUrls = [
 exports.signup = function (req, res) {
   // For security measurement we remove the roles from the req.body object
   delete req.body.roles;
-
+  //console.log(req.body.roles)
+  // console.log(req.body);
+  // console.log("before user");
   // Init user and add missing fields
   var user = new User(req.body);
+  // console.log(user);
+  // user.roles = 'manager';
+  // console.log("after user");
+  
   user.provider = 'local';
   user.displayName = user.firstName + ' ' + user.lastName;
 
@@ -37,7 +43,9 @@ exports.signup = function (req, res) {
       // Remove sensitive data before login
       user.password = undefined;
       user.salt = undefined;
-
+      user.roles = 'manager';
+      console.log('this is it');
+      console.log(user);
       req.login(user, function (err) {
         if (err) {
           res.status(400).send(err);

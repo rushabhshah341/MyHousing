@@ -13,20 +13,21 @@
       title: 'Listingproperties',
       state: 'listingproperties',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['user','admin','manager']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'listingproperties', {
       title: 'View Properties',
-      state: 'listingproperties.list'
+      state: 'listingproperties.list',
+      roles: ['user','admin','manager']
     });
 
     // Add the dropdown create item
     menuService.addSubMenuItem('topbar', 'listingproperties', {
       title: 'Add Properties',
       state: 'listingproperties.create',
-      roles: ['user']
+      roles: ['user','admin','manager']
     });
   }
 }());

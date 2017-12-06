@@ -28,9 +28,18 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get', 'post']
     }, {
       resources: '/api/allpackages/:allpackageId',
-      permissions: ['get']
+      permissions: ['get', 'post', 'put', 'delete', 'patch']
     }]
-  }, {
+  },{
+    roles: ['manager'],
+    allows: [{
+      resources: '/api/allpackages',
+      permissions: ['get', 'post']
+    }, {
+      resources: '/api/allpackages/:allpackageId',
+      permissions: ['get', 'post', 'put', 'delete', 'patch']
+    }]
+  },{
     roles: ['guest'],
     allows: [{
       resources: '/api/allpackages',

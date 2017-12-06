@@ -1,9 +1,9 @@
 <section id="main">
   <div class="page-header">
-
+    
   </div>
   <div class="container">
-    <form name="vm.form.allpackageForm" class="form-horizontal" ng-submit="vm.save(vm.form.allpackageForm.$valid)"
+    <form name="vm.form.allpackageForm {{vm.allpackage._id ? 'Update' : 'Select'}}" class="form-horizontal" ng-submit="vm.save(vm.form.allpackageForm.$valid)"
           novalidate>
     <div class="row">
       <div class="col-md-9">

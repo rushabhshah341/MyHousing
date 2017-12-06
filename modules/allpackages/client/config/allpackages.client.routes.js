@@ -20,7 +20,7 @@
         controller: 'AllpackagesListController',
         controllerAs: 'vm',
         data: {
-          roles: ['user'],
+          roles: ['user', 'manager', 'admin'],
           pageTitle: 'Allpackages List'
         }
       })
@@ -33,7 +33,7 @@
           allpackageResolve: newAllpackage
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin', 'manager'],
           pageTitle: 'Allpackages Create'
         }
       })
@@ -47,7 +47,7 @@
           allpackageResolve: getAllpackage
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin', 'manager'],
           pageTitle: 'Edit package {{ allpackageResolve.name }}'
         }
       })
@@ -60,7 +60,7 @@
           allpackageResolve: getAllpackage
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin', 'manager'],
           pageTitle: 'package {{ allpackageResolve.name }}'
         }
       });

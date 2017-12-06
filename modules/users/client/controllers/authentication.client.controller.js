@@ -16,7 +16,10 @@
     vm.signin = signin;
     vm.callOauthProvider = callOauthProvider;
     vm.usernameRegex = /^(?=[\w.-]+$)(?!.*[._-]{2})(?!\.)(?!.*\.$).{3,34}$/;
+    //vm.operation = operation;
+    $scope.roles = 'user';
 
+    
     // Get an eventual error defined in the URL query string:
     if ($location.search().err) {
       Notification.error({ message: $location.search().err });
@@ -34,7 +37,10 @@
 
         return false;
       }
-
+      $scope.newValue = function(value) {
+        $scope.vm.credentials.roles = value;
+     }
+      console.log(vm.credentials);  
       UsersService.userSignup(vm.credentials)
         .then(onUserSignupSuccess)
         .catch(onUserSignupError);
@@ -67,7 +73,17 @@
 
     function onUserSignupSuccess(response) {
       // If successful we assign the response to the global user model
-      vm.authentication.user = response;
+      $scope.user = {
+        roles: 'user'
+      }
+
+      // $http.put('/api/listingproperties/')
+      // .success(function(data) {
+      //   $scope.names = data; 
+      //   vm.authentication.user = response;
+      // });
+
+      
       Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Signup successful!' });
       // And redirect to the previous or home page
       $state.go($state.previous.state.name || 'home', $state.previous.params);

@@ -28,7 +28,16 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get', 'post']
     }, {
       resources: '/api/listingproperties/:listingpropertyId',
-      permissions: ['get']
+      permissions: ['get','post']
+    }]
+  }, {
+    roles: ['manager'],
+    allows: [{
+      resources: '/api/listingproperties',
+      permissions: ['get', 'post', 'put']
+    }, {
+      resources: '/api/listingproperties/:listingpropertyId',
+      permissions: ['get','post', 'put']
     }]
   }, {
     roles: ['guest'],

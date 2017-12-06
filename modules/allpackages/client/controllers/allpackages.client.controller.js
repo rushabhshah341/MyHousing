@@ -21,8 +21,7 @@
     vm.pn1 = pn1;
     vm.pn2 = pn2;
 
-
-    function pn(){
+    $scope.pn = function(){
       allpackage.packageName = 'Gold';
       console.log(vm.allpackage);
       $http.put('/api/allpackages/' + allpackage._id, vm.allpackage).success(function() {
@@ -30,6 +29,12 @@
       }).error(function() {
         Notification.error('Error in package selection');
       });
+      $scope.pn();
+
+    }
+
+    function pn(){
+      
     }
 
     function pn1(){

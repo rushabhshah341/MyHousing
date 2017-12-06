@@ -20,7 +20,7 @@
         controller: 'ArticlesAdminListController',
         controllerAs: 'vm',
         data: {
-          roles: ['admin']
+          roles: ['admin','user']
         }
       })
       .state('admin.articles.create', {
@@ -29,7 +29,7 @@
         controller: 'ArticlesAdminController',
         controllerAs: 'vm',
         data: {
-          roles: ['admin']
+          roles: ['*']
         },
         resolve: {
           articleResolve: newArticle
@@ -41,7 +41,7 @@
         controller: 'ArticlesAdminController',
         controllerAs: 'vm',
         data: {
-          roles: ['admin'],
+          roles: ['*'],
           pageTitle: '{{ articleResolve.title }}'
         },
         resolve: {

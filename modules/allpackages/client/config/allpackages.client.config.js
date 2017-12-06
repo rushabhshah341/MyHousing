@@ -13,13 +13,14 @@
       title: 'Package',
       state: 'allpackages',
       type: 'dropdown',
-      roles: ['user']
+      roles: ['*']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'allpackages', {
       title: 'View Packages',
-      state: 'allpackages.list'
+      state: 'allpackages.list',
+      roles: ['*']
     });
 
     // Add the dropdown create item
