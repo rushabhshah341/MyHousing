@@ -74,8 +74,6 @@ you can use ROBOMOngo as well for that
 ```shell
 $ node server.js
 
-```sh
-$ npm install --save multer
-```
+
 
 

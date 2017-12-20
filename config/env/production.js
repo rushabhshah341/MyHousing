@@ -13,26 +13,32 @@ module.exports = {
   // Binding to 127.0.0.1 is safer in production.
   host: process.env.HOST || '0.0.0.0',
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/PropertyPortal',
+    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'ds155634.mlab.com:55634') + '/propertyportal',
     options: {
-      user: '',
-      pass: ''
-      /**
-      * Uncomment to enable ssl certificate based authentication to mongodb
-      * servers. Adjust the settings below for your specific certificate
-      * setup.
-      * for connect to a replicaset, rename server:{...} to replset:{...}
+      user: 'admin',
+      pass: 'admin'
+     },
+     //{
+    // uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/PropertyPortal',
+    // options: {
+    //   user: '',
+    //   pass: ''
+    //   /**
+    //   * Uncomment to enable ssl certificate based authentication to mongodb
+    //   * servers. Adjust the settings below for your specific certificate
+    //   * setup.
+    //   * for connect to a replicaset, rename server:{...} to replset:{...}
 
-      ssl: true,
-      sslValidate: false,
-      checkServerIdentity: false,
-      sslCA: fs.readFileSync('./config/sslcerts/ssl-ca.pem'),
-      sslCert: fs.readFileSync('./config/sslcerts/ssl-cert.pem'),
-      sslKey: fs.readFileSync('./config/sslcerts/ssl-key.pem'),
-      sslPass: '1234'
+    //   ssl: true,
+    //   sslValidate: false,
+    //   checkServerIdentity: false,
+    //   sslCA: fs.readFileSync('./config/sslcerts/ssl-ca.pem'),
+    //   sslCert: fs.readFileSync('./config/sslcerts/ssl-cert.pem'),
+    //   sslKey: fs.readFileSync('./config/sslcerts/ssl-key.pem'),
+    //   sslPass: '1234'
 
-      */
-    },
+    //   */
+    // },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
