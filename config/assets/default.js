@@ -1,20 +1,16 @@
 'use strict';
 
-/* eslint comma-dangle:[0, "only-multiline"] */
-
 module.exports = {
   client: {
     lib: {
       css: [
-        // bower:css
         'public/lib/bootstrap/dist/css/bootstrap.css',
         'public/lib/bootstrap/dist/css/bootstrap-theme.css',
         'public/lib/font-awesome/css/font-awesome.min.css',
         'public/lib/angular-ui-notification/dist/angular-ui-notification.css'
-        // endbower
       ],
       js: [
-        // bower:js
+
         'public/lib/angular/angular.js',
         'modules/core/client/app/jquery.2.0.2.min.js',
         'public/lib/jquery/dist/jquery.min.js',
@@ -30,14 +26,8 @@ module.exports = {
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         '//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
-        //'https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE&place_id=ChIJd8BlQ2BZwokRAFUEcm_qrcA',
-        //'//maps.googleapis.com/maps/api/geocode/json/key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE',
-        //'//maps.googleapis.com/maps/api/geocode/json?place_id=ChIJd8BlQ2BZwokRAFUEcm_qrcA&key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE',
         'public/lib/angular-google-maps-geocoder/src/angular-google-maps-geocoder.js',
         'public/lib/ngmap/build/scripts/ng-map.min.js',
-        //'public/lib/angular-google-maps-geocoder/dist/angular-google-maps-geocoder.min.js'
-        
-        // endbower
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']
     },
